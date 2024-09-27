@@ -1,0 +1,81 @@
+.product-list {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+}
+html, body {
+    --tw-bg-opacity: 1;
+    background-color: rgb(245 220 220 / 16%);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards for mobile */
+    gap: 1rem; /* Space between cards */
+}
+
+.product-card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    height: 99%;
+    border-radius: 0.5rem;
+    box-shadow: 0 19px 40px rgba(43, 39, 35, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+/* Hover effect */
+.product-card:hover {
+    transform: translateY(-5px); /* Lift effect */
+   /* Lighter blue on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+/* Active state for touch devices */
+.product-card:active {
+    transform: translateY(0); /* Reset lift */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Reset shadow */
+}
+
+/* Responsive media queries */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .grid {
+        display: none; /* Hide grid on larger screens */
+    }
+    .object-cover {
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 1025px) {
+    .grid {
+        display: none; /* Hide grid on larger screens */
+    }
+
+    .md\:table {
+        display: table; /* Show table on larger screens */
+    }
+    .object-cover {
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc; /* Solid border */
+    padding: 8px;
+    text-align: left;
+}
+
+thead {
+    background-color: #f2f2f2; /* Header background */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping */
+}

@@ -9,4 +9,23 @@ body {
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
+  @media (max-width: 640px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Medium-sized screens (min-width: 641px and max-width: 1024px) */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Desktops (min-width: 1025px) */
+  @media (min-width: 1025px) {
+    .grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 }
